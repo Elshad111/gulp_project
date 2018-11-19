@@ -84,3 +84,13 @@ body{
 	background: #fff;
 	color: $main-color;
 }
+
+.unselectable {
+	@include unselectable;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

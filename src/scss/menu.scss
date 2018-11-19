@@ -7,22 +7,23 @@
 	left: 0;
 	z-index: 105;
 	width: 100%;
-	height: 65px;
+	height: $menu-height;
 	background: $main-background;
 }
 
 .menu_container{
-	width: $max-width;
-	position: relative;
-	margin: 0 auto;
+	width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+    position: relative;
 }
 
 .menu_logo{
 	float: left;
 	vertical-align: middle;
 	a{
-		height: 60px;
-		line-height: 60px;
+		height: $menu-height;
+		line-height: $menu-height;
 		img{
 			vertical-align: middle;
 			height: 38px;
@@ -37,7 +38,72 @@
 .menu_item{
 	display: block;
 	float: left;
-	line-height: 60px;
-	font-weight: 500;
+	line-height: $menu-height;
 	margin: 0 5px;
 }
+
+.menu_link{
+	@include text-font(#a8b9c0, 15px, 500);
+	text-transform: uppercase;
+	padding: 5px 15px;
+	letter-spacing: .5px;
+	transition: color .3s ease-out;
+}
+
+.menu_item:first-child .menu_link{
+	padding: 5px 15px 5px 0;
+}
+
+.menu_link_active{
+	color: #00c7c0;
+}
+
+.menu_tray{
+	float: right;
+}
+
+.menu_btn{
+	display: block;
+	line-height: $menu-height;
+	float: right;
+}
+
+.btn_red {
+    padding: 12px 30px;
+    color: #ffc501;
+    font-size: 15px;
+    font-weight: 400;
+    background: #ff3150;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.btn_red:hover{
+	background: #fd4b66;
+}
+
+.search{
+	display: block;
+	line-height: $menu-height;
+	margin: 0 5px;
+	position: relative;
+	float: right;
+	img{
+		vertical-align: middle;
+		margin-left: 20px;
+	}
+	
+}
+
+.search:before{
+	content: "";
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    display: block;
+    width: 1px;
+    height: 40%;
+    background: #00c7c0;
+}
+
+
