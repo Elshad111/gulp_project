@@ -10,11 +10,11 @@
 }
 
 .services_text{
-	margin-bottom: 4.375em;
-	text-align: center;
+	@include section-text;
 }
-.services_text:before{
 
+.services_text:before{
+	@include section-text-before;
 }
 
 .services_title{
@@ -46,14 +46,38 @@
 .services_item_icon{
 	width: 100%;
     line-height: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
     img{
-    	width: 100%;
+    	max-width: 100%;
     	height: auto;
     }
+    .services_item_cnt{
+    	position: absolute;
+    	left: 0;
+    	right: 0;
+    	bottom: 0;
+    	margin: 0 auto;
+    } 
 }
 
 .services_item_info{
-	margin-top: 36px;
 	text-align: center;
+}
+
+.services_item_title{
+	margin-bottom: 25px;
+	h3{
+		@include text-font(#ffc501, 20px, 400);
+		text-transform: uppercase;
+	}
+}
+
+.services_item_text{
+	p{
+		@include text-font($text-font);
+		line-height: 25px;
+	}
 }
 

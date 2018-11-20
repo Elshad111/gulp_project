@@ -59,3 +59,28 @@
 	width: $width;
 	margin: $margin;
 }
+
+@mixin section-text{
+	margin-top: 6em;
+	margin-bottom: 5em;
+	text-align: center;
+	position: relative;
+}
+
+@mixin section-text-before{
+	content: "";
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    background: url(../img/composite_path.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    display: block;
+    width: 81px;
+    height: 60px;
+}
