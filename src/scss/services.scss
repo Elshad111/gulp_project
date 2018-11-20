@@ -1,2 +1,6 @@
 @import "partials/params";
 @import "partials/mixins";
+
+.services{
+	@include block(#fff);
+}
