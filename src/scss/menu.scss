@@ -6,15 +6,13 @@
 	top: 0;
 	left: 0;
 	z-index: 105;
-	width: 100%;
 	height: $menu-height;
-	background: $main-background;
+	@include block; 
 }
 
 .menu_container{
 	width: 100%;
-    max-width: $max-width;
-    margin: 0 auto;
+    @include content(0);
     position: relative;
 }
 
@@ -43,11 +41,15 @@
 }
 
 .menu_link{
-	@include text-font(#a8b9c0, 15px, 500);
+	@include text-font($text-font, 15px, 400);
 	text-transform: uppercase;
 	padding: 5px 15px;
 	letter-spacing: .5px;
 	transition: color .3s ease-out;
+}
+
+.menu_item:hover .menu_link{
+	color: #00c7c0;
 }
 
 .menu_item:first-child .menu_link{
@@ -69,13 +71,10 @@
 }
 
 .btn_red {
-    padding: 12px 30px;
-    color: #ffc501;
-    font-size: 15px;
+    @include btn;
     font-weight: 400;
-    background: #ff3150;
-    border-radius: 10px;
     margin-left: 15px;
+    transition: background .3s ease-out;
 }
 
 .btn_red:hover{

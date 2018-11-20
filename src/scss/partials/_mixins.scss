@@ -14,3 +14,22 @@
 	font-size: $font-size;
 	font-weight: $font-weight;
 }
+
+@mixin btn($font-size: 15px, $padding: 10px 30px, $border-radius: 30px, $color: #ffc501, $background: #ff3150){
+	font-size: $font-size;
+	padding: $padding;
+	border-radius: $border-radius;
+	color: $color;
+	background: $background;
+}
+
+@mixin content($padding: 3.750em 0 0 4.125em, $margin: 0 auto, $max-width: $max-width){
+	padding: $padding;
+	max-width: $max-width;    
+    margin: $margin;    
+}
+
+@mixin block($background: $main-background, $width: 100%){
+	width: $width;
+	background: $background;
+}

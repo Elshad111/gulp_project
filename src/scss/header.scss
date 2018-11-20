@@ -1,0 +1,39 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.header{
+	@include block;
+}
+
+.header_container{
+	@include content(8.750em 0 8.750em);
+}
+
+.header_container_info{
+	text-align: center;
+}
+
+.header_text{
+	margin-bottom: 45px;
+	p{
+		@include text-font($text-font);
+	}
+}
+
+.header_title{
+	margin-bottom: 20px;
+	text-align: center;
+	h1{
+		@include text-font(#f0f8fb, 50px, 400);
+	}
+}
+
+.header_btn{
+	a{
+		@include btn(15px, 1.250em 3.750em);
+		transition: background .3s ease-out;
+	}
+	a:hover{
+		background: #fd4b66;
+	}
+}
