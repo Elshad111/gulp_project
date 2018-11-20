@@ -21,9 +21,10 @@
 	border-radius: $border-radius;
 	color: $color;
 	background: $background;
+	cursor: pointer;
 }
 
-@mixin content($padding: 3.750em 0 0 4.125em, $margin: 0 auto, $max-width: $max-width){
+@mixin content($padding: 3.750em 0, $margin: 0 auto, $max-width: $max-width){
 	padding: $padding;
 	max-width: $max-width;    
     margin: $margin;    
@@ -32,4 +33,29 @@
 @mixin block($background: $main-background, $width: 100%){
 	width: $width;
 	background: $background;
+}
+
+@mixin p-before{
+	content: "";
+	position: absolute;
+	top: 35px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 150px;
+	height: 2px;
+	margin: 0 auto;
+	background: #70dddb;
+}
+
+@mixin items($margin: 0 -3%, $justify-content: center){
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: $justify-content;
+	margin: $margin;
+}
+
+@mixin item($width: 27.333333%, $margin: 0 3%){
+	width: $width;
+	margin: $margin;
 }

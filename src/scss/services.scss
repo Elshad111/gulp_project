@@ -2,9 +2,58 @@
 @import "partials/mixins";
 
 .services{
-	@include block(#eff7fa);
+	@include block(#fff);
 }
 
 .services_container{
 	@include content;
 }
+
+.services_text{
+	margin-bottom: 4.375em;
+	text-align: center;
+}
+.services_text:before{
+
+}
+
+.services_title{
+	margin-bottom: 20px;
+	h3{
+		@include text-font($main-color, 35px);
+	}
+}
+
+.services_description{
+	position: relative;
+	p{
+		@include text-font($text-font);
+		text-transform: uppercase;
+	}
+	p:after{
+		@include p-before;
+	}
+}
+
+.services_items{
+	@include items;
+}
+
+.services_item{
+	@include item;
+}
+
+.services_item_icon{
+	width: 100%;
+    line-height: 0;
+    img{
+    	width: 100%;
+    	height: auto;
+    }
+}
+
+.services_item_info{
+	margin-top: 36px;
+	text-align: center;
+}
+

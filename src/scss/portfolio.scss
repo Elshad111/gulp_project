@@ -1,0 +1,58 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.portfolio{
+	@include block(#eff7fa);
+}
+
+.portfolio_container{
+	@include content;
+}
+
+.portfolio_text{
+	margin-bottom: 4.375em;
+	text-align: center;
+}
+.portfolio_text:before{
+
+}
+
+.portfolio_title{
+	margin-bottom: 20px;
+	h3{
+		@include text-font($main-color, 35px);
+	}
+}
+
+.portfolio_description{
+	position: relative;
+	p{
+		@include text-font($text-font);
+		text-transform: uppercase;
+	}
+	p:after{
+		@include p-before;
+	}
+}
+
+.portfolio_categories{
+	text-align: center;
+	margin-bottom: 3.75em;
+}
+
+.portfolio_categories_item{
+	@include btn(15px, 10px 30px,30px,$text-font, transparent);
+	display: inline-block;
+	transition: color .3s ease-out, background .3s ease-out;
+	margin-right: 16px;
+}
+
+.portfolio_categories_item:hover{
+	color: #ffc501;
+	background: #ff3150;
+}
+
+.portfolio_item_active{
+	color: #ffc501;
+	background: #ff3150;
+}
