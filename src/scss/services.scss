@@ -2,5 +2,9 @@
 @import "partials/mixins";
 
 .services{
-	@include block(#fff);
+	@include block(#eff7fa);
+}
+
+.services_container{
+	@include content;
 }
