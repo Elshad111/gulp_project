@@ -60,9 +60,8 @@
 	margin: $margin;
 }
 
-@mixin section-text{
-	margin-top: 6em;
-	margin-bottom: 5em;
+@mixin section-text($margin: 6em 0 5em){
+	margin: $margin;
 	text-align: center;
 	position: relative;
 }

@@ -1,0 +1,71 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.team{
+	@include block(#eff7fa);
+}
+
+.team_container{
+	@include content(7.5em 0 3.75em);
+}
+
+.team_text{
+	@include section-text(0);
+}
+
+.team_title{
+	margin-bottom: 20px;
+	h3{
+		@include text-font(#ffc501, 35px);
+	}
+}
+
+.team_info{
+	margin-bottom: 3.75em;
+	max-width: 800px;
+	margin: 0 auto 30px;
+	p{
+		@include text-font($text-font);
+		line-height: 25px;
+	}
+}
+
+.team_items{
+	@include items(0 -1%);
+}
+
+.team_item{
+	@include item(23%, 1%);
+}
+
+.team_item_img{
+	width: 100%;
+	line-height: 0; 
+	position: relative;
+	img{
+		width: 100%;
+		height: auto;
+	}
+}
+
+.team_item_name{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	background: rgba(51, 209, 204, 0.8);
+	p{
+		@include text-font(#fff, 20px);
+		padding: 25px 0;
+	}
+}
+
+.team_item_description{
+	background: #fff;
+	text-align: center;
+	padding: 30px 25px;
+	p{
+		@include text-font;
+		line-height: 20px;
+	}
+}

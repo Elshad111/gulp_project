@@ -6,11 +6,11 @@
 }
 
 .aboutus_container{
-	@include content;
+	@include content(3.75em 0 0);
 }
 
 .aboutus_text{
-	text-align: center;
+	@include section-text;
 }
 
 .aboutus_text:before{
@@ -24,7 +24,7 @@
 	}
 }
 
-.paboutus_description{
+.aboutus_description{
 	position: relative;
 	p{
 		@include text-font($text-font);
@@ -32,5 +32,70 @@
 	}
 	p:after{
 		@include p-before;
+	}
+}
+
+.aboutus_info{
+	@include content(0, 45px auto 0, 600px);
+	p{
+		@include text-font($text-font);
+	}
+	line-height: 25px;
+}
+
+.aboutus_items{
+	@include items(0);
+}
+
+.aboutus_item_left{
+	@include item(40%, 0);
+	position: relative;
+}
+
+.aboutus_item_right{
+	@include item(60%, 0);
+}
+
+.aboutus_item_img{
+	width: 100%;
+    line-height: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    img{
+    	width: 100%;
+    	height: auto;
+    }
+}
+
+.aboutus_item_info{
+	position: absolute;
+	bottom: 90px;
+}
+
+.aboutus_item_title{
+	margin-bottom: 30px;
+	h3{
+		@include text-font($main-color, 35px, 400);
+	}
+}
+
+.aboutus_item_text{
+	margin-bottom: 40px;
+	P{
+		@include text-font($text-font);
+		margin-bottom: 25px;
+		line-height: 25px;
+	}
+}
+
+.aboutus_item_btn{
+	a{
+		@include btn(15px, 16px 50px);
+		text-transform: uppercase;
+		transition: background .3s ease-out;
+	}
+	a:hover{
+		background: #fd4b66;
 	}
 }
