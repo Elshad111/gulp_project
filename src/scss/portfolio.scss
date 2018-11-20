@@ -10,11 +10,10 @@
 }
 
 .portfolio_text{
-	margin-bottom: 4.375em;
-	text-align: center;
+	@include section-text;
 }
 .portfolio_text:before{
-
+	@include section-text-before;
 }
 
 .portfolio_title{
@@ -55,4 +54,23 @@
 .portfolio_item_active{
 	color: #ffc501;
 	background: #ff3150;
+}
+
+.portfolio_items{
+	@include items(0 -1%);
+}
+
+.portfolio_item{
+	@include item(23%, 1%);
+	cursor: pointer;
+}
+
+.portfolio_item_img{
+	position: relative;
+    width: 100%;
+    line-height: 0;
+	img{
+		width: 100%;
+    	height: auto;
+	}
 }

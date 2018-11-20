@@ -1,0 +1,36 @@
+@import "partials/mixins";
+@import "partials/params";
+
+.aboutus{
+	@include block(100%, #fff);
+}
+
+.aboutus_container{
+	@include content;
+}
+
+.aboutus_text{
+	text-align: center;
+}
+
+.aboutus_text:before{
+	@include section-text-before;
+}
+
+.aboutus_title{
+	margin-bottom: 20px;
+	h3{
+		@include text-font($main-color, 35px);
+	}
+}
+
+.paboutus_description{
+	position: relative;
+	p{
+		@include text-font($text-font);
+		text-transform: uppercase;
+	}
+	p:after{
+		@include p-before;
+	}
+}

@@ -55,7 +55,7 @@
 	margin: $margin;
 }
 
-@mixin item($width: 27.333333%, $margin: 0 3%){
+@mixin item($width: 27.333333%, $margin: 3%){
 	width: $width;
 	margin: $margin;
 }
