@@ -1,0 +1,28 @@
+@import "partials/mixins";
+@import "partials/params";
+
+.clients{
+	@include block(#fff);
+}
+
+.clients_container{
+	@include content(3.75em 0);
+}
+
+.clients_items{
+	@include items(0 -3%);
+}
+
+.clients_item{
+	@include item(10.66666667%, 3%);
+}
+
+.clients_item_img{
+	width: 100%;
+    line-height: 0;
+    position: relative;
+    img{
+    	width: 100%;
+    	height: auto;
+    }
+}

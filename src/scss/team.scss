@@ -57,6 +57,7 @@
 	p{
 		@include text-font(#fff, 20px);
 		padding: 25px 0;
+		text-transform: uppercase;
 	}
 }
 
