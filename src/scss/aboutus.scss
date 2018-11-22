@@ -2,7 +2,7 @@
 @import "partials/params";
 
 .aboutus{
-	@include block(100%, #fff);
+	@include block(#fff, 100%);
 }
 
 .aboutus_container{

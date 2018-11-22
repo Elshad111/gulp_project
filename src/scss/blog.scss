@@ -1,0 +1,36 @@
+@import "partials/mixins";
+@import "partials/params";
+
+.blog{
+	@include block;
+}
+
+.blog_container{
+	@include content(3.75em 0);
+}
+
+.blog_text{
+	@include section-text;
+}
+
+.blog_text{
+	@include section-text-before;
+}
+
+.blog_title{
+	margin-bottom: 20px;
+	h3{
+		@include text-font($main-color, 35px);
+	}
+}
+
+.blog_description{
+	position: relative;
+	p{
+		@include text-font($text-font);
+		text-transform: uppercase;
+	}
+	p:after{
+		@include p-before;
+	}
+}
