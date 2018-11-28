@@ -13,7 +13,6 @@ var browserSync = require('browser-sync').create();
 
 var config = {
 	paths: {
-		scss: './src/scss/**/*.scss',
 		html: './public/index.html',
 		img: './src/img/**'
 	},
@@ -26,7 +25,7 @@ var config = {
 };
 
 gulp.task('scss', function(){
-	return gulp.src(config.paths.scss)
+	return gulp.src(['./src/scss/main.scss', './src/scss/menu.scss', './src/scss/header.scss', './src/scss/services.scss', './src/scss/portfolio.scss', './src/scss/aboutus.scss', './src/scss/team.scss', './src/scss/others.scss', './src/scss/blog.scss', './src/scss/footer.scss'])
 		.pipe(gulpIf(config.isDevelop, sourcemaps.init()))
 		.pipe(sass())
 		.pipe(concat(config.output.cssName))
@@ -76,4 +75,4 @@ gulp.task('server', function(){
 	gulp.watch(config.paths.html).on('change', browserSync.reload);
 });
 
-gulp.task('default', ['scss', 'server', 'images', 'clear']);
+gulp.task('default', ['scss', 'server']);
