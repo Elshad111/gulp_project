@@ -48,9 +48,9 @@
 	background: #70dddb;
 }
 
-@mixin items($margin: 0 -3%, $justify-content: center){
+@mixin items($margin: 0 -3%, $justify-content: center, $flex-wrap: wrap){
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: $flex-wrap;
 	justify-content: $justify-content;
 	margin: $margin;
 }

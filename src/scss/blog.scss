@@ -2,7 +2,7 @@
 @import "partials/params";
 
 .blog{
-	@include block;
+	@include block(#fff);
 }
 
 .blog_container{
@@ -13,7 +13,7 @@
 	@include section-text;
 }
 
-.blog_text{
+.blog_text:before{
 	@include section-text-before;
 }
 
@@ -33,4 +33,47 @@
 	p:after{
 		@include p-before;
 	}
+}
+
+.blog_items{
+	@include items(0 -1%);
+}
+
+.blog_item{
+	@include item(31.33333333%, 1%);
+}
+
+.blog_item_img{
+    width: 100%;
+    line-height: 0;
+	img{
+		width: 100%;
+    	height: auto;
+	}
+}
+
+.blog_item_text{
+	padding: 20px 4px; 
+}
+
+.blog_item_date{
+	margin-bottom: 20px;
+	p{
+		@include text-font($text-font, 13px);
+	}
+}
+
+.blog_item_title{
+	h3{
+		@include text-font($main-color, 20px, 400);
+	}
+}
+
+.blog_btn{
+	text-align: center;
+	margin-top: 30px;
+    a{
+        @include btn(15px, 1em 3.75em);
+        text-transform: uppercase;
+    }
 }

@@ -1,0 +1,59 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.footer{
+	@include block($main-background);
+}
+
+.footer_container{
+	@include content();
+}
+
+.footer_main{
+	@include items(0 -0.5, center, nowrap);
+}
+
+.footer_main_column{
+	@include item(24%, 0.5%);
+}
+
+.footer_main_logo{
+    width: 100%;
+    line-height: 0;
+	img{
+    	height: auto;
+	}
+}
+
+.footer_main_copyrights{
+	margin-top: 30px;
+	p{
+		@include text-font($text-font, 13px);
+		line-height: 20px;
+	}
+	p:first-child{
+		margin-bottom: 75px;
+	}
+	
+}
+
+.blue{
+	color: #00c7c0;
+}
+
+.yellow{
+	color: #ffc501;
+}
+
+.footer_main_link{
+	@include text-font(#f0f8fb);
+}
+
+.footer_list{
+	li{
+		margin-top: 25px;
+	}
+	.footer_list_link{
+		@include text-font($text-font, 13px);
+	}
+}

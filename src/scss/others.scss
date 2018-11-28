@@ -57,7 +57,7 @@
 .advertise_btn{
     text-align: center;
     a{
-        @include btn(15px, 1.25em 3.75em);
+        @include btn(15px, 1em 3.75em);
         text-transform: uppercase;
     }
 }
