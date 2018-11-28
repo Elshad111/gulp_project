@@ -5,16 +5,22 @@ var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
 var cleanCss = require('gulp-clean-css');
 var gulpIf = require('gulp-if');
+var imagemin = require('gulp-imagemin'); 
+var imageminJpegRecompress = require('imagemin-jpeg-recompress');
+var pngquant = require('imagemin-pngquant');
+var cache = require('gulp-cache');
 var browserSync = require('browser-sync').create();
 
 var config = {
 	paths: {
 		scss: './src/scss/**/*.scss',
-		html: './public/index.html'
+		html: './public/index.html',
+		img: './src/img/**'
 	},
 	output: {
 		cssName: 'css/bundle.css',
-		path: './public'
+		path: './public',
+		img: './public/img'
 	},
 	isDevelop: true
 };
@@ -34,6 +40,32 @@ gulp.task('scss', function(){
 		.pipe(browserSync.stream());		
 });
 
+// Images optimization and copy in /dist
+gulp.task('images', function() {
+  return gulp.src(config.paths.img)
+    .pipe(cache(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.jpegtran({progressive: true}),
+      imageminJpegRecompress({
+        loops: 5,
+        min: 65,
+        max: 70,
+        quality:'medium'
+      }),
+      imagemin.svgo(),
+      imagemin.optipng({optimizationLevel: 3}),
+      pngquant({quality: '65-70', speed: 5})
+    ],{
+      verbose: true
+    })))
+    .pipe(gulp.dest(config.output.img));
+});
+
+// Clearing the cache
+gulp.task('clear', function (done) {
+  return cache.clearAll(done);
+});
+
 gulp.task('server', function(){
 	browserSync.init({
 		server: {
@@ -44,4 +76,4 @@ gulp.task('server', function(){
 	gulp.watch(config.paths.html).on('change', browserSync.reload);
 });
 
-gulp.task('default', ['scss', 'server']);
+gulp.task('default', ['scss', 'server', 'images', 'clear']);

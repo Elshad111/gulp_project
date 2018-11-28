@@ -6,15 +6,28 @@
 }
 
 .footer_container{
-	@include content();
+	@include content(3.75em 0 3em 0);
 }
 
 .footer_main{
-	@include items(0 -0.5, center, nowrap);
+	@include items(0 -0.5%, center, nowrap);
 }
 
 .footer_main_column{
 	@include item(24%, 0.5%);
+}
+
+.footer_main_column:first-child{
+	width: 31%;
+}
+
+.footer_main_column:nth-child(2), .footer_main_column:nth-child(3){
+	width: 14%;
+	margin: 0.5% 2%;
+}
+
+.footer_main_column:last-child{
+	width: 31%;
 }
 
 .footer_main_logo{
@@ -29,10 +42,10 @@
 	margin-top: 30px;
 	p{
 		@include text-font($text-font, 13px);
-		line-height: 20px;
+		line-height: 38px;
 	}
 	p:first-child{
-		margin-bottom: 75px;
+		margin-bottom: 60px;
 	}
 	
 }
@@ -47,13 +60,41 @@
 
 .footer_main_link{
 	@include text-font(#f0f8fb);
+	
 }
 
 .footer_list{
 	li{
 		margin-top: 25px;
 	}
+
 	.footer_list_link{
 		@include text-font($text-font, 13px);
+	}
+}
+
+.footer_list_icon{
+	li{
+		display: inline-block;
+		margin-left: 12px;
+	}
+	li:first-child{
+		margin-left: 0;
+	}
+}
+
+.footer_btn{
+	margin-bottom: 50px;
+	a{
+		@include btn(13px, 15px 100px, 30px, #fff);
+	}
+}
+
+.footer_description{
+	margin-bottom: 40px;
+	margin-top: 20px;
+	p{
+		@include text-font($text-font, 13px);
+		line-height: 38px;
 	}
 }
