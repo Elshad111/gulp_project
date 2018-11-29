@@ -22,7 +22,7 @@ var config = {
 		path: './public',
 		img: './public/img'
 	},
-	isDevelop: true
+	isDevelop: false
 };
 
 gulp.task('scss', function(){
