@@ -33,6 +33,24 @@
 	float: right;
 }
 
+.menu_toggle{
+	float: right;
+	display: none;
+}
+
+.menu_toggle_icon{
+	display: block;
+	line-height: 65px;
+}
+
+.menu_icon{
+	height: 35px;
+    width: 35px;
+    fill: $text-font;
+    opacity: 1;
+    vertical-align: middle;
+}
+
 .menu_item{
 	display: block;
 	float: left;
@@ -62,6 +80,9 @@
 
 .menu_tray{
 	float: right;
+    position: absolute;
+    top: 0;
+    right: 115px;
 }
 
 .menu_btn{
@@ -73,7 +94,7 @@
 .btn_red {
     @include btn;
     font-weight: 400;
-    margin-left: 15px;
+    margin-left: 80px;
     transition: background .3s ease-out;
 }
 

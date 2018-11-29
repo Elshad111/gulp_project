@@ -66,6 +66,7 @@
 .blog_item_title{
 	h3{
 		@include text-font($main-color, 20px, 400);
+		line-height: 24px;
 	}
 }
 

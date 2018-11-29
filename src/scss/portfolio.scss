@@ -44,6 +44,7 @@
 	display: inline-block;
 	transition: color .3s ease-out, background .3s ease-out;
 	margin-right: 16px;
+	margin-top: 16px;
 }
 
 .portfolio_categories_item:hover{
@@ -73,4 +74,38 @@
 		width: 100%;
     	height: auto;
 	}
+}
+
+.portfolio_item_text{
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(51,209, 204,.75);
+    text-align: center;
+    line-height: 1em;
+    display: none;
+    opacity: 0;
+}
+
+.portfolio_item_title{
+	margin-bottom: 20px;
+	margin-top: 25%;
+	h3{
+		@include text-font(#fff, 20px);
+	}
+}
+
+.portfolio_item_description{
+	p{
+		@include text-font($main-color, 15px);
+	}
+}
+
+.text_show{
+	display: block;
+	opacity: 1;
 }

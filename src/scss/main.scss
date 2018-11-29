@@ -94,3 +94,39 @@ body{
     display: table;
     clear: both;
 }
+
+.scroll_to_top{
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    z-index: 100;
+    border: 1px solid #ff3150;
+    border-radius: 50%;
+    background: #ff3150;
+    padding: 5px 7px 9px 7px;
+    float: right;
+    opacity: 0;
+    cursor: pointer;
+    transform: translateY(100px);
+    transition: all 0.3s ease-in;
+}
+
+.vis {
+    display: block;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+
+.arrow_up{
+    display: block;
+    height: 35px;
+    width: 35px;
+    fill: #fff;
+    opacity: 1;
+}
+
+#home{
+    opacity: 0;
+    display: block;
+}
