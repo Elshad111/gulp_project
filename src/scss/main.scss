@@ -2,9 +2,9 @@
 @import "partials/mixins";
 
 *{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {  margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
@@ -42,7 +42,7 @@ a, u {
 }
 
 p{
-	-webkit-margin-before: 0em;
+    -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
@@ -74,19 +74,19 @@ body{
     position: relative;
     width: 100%;
     font-family: 'Roboto', sans-serif;
-	overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 .wrapper{
-	position: relative;
-	width: 100%;
-	min-height: 100%;
-	background: #fff;
-	color: $main-color;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    background: #fff;
+    color: $main-color;
 }
 
 .unselectable {
-	@include unselectable;
+    @include unselectable;
 }
 
 .clearfix:after {

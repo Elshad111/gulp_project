@@ -2,28 +2,28 @@
 @import "partials/params";
 
 .clients{
-	@include block(#fff);
+    @include block(#fff);
 }
 
 .clients_container{
-	@include content(2em 0);
+    @include content(2em 0);
 }
 
 .clients_items{
-	@include items(0 -3%);
+    @include items(0 -3%);
 }
 
 .clients_item{
-	@include item(10.66666667%, 3%);
+    @include item(10.66666667%, 3%);
 }
 
 .clients_item_img{
-	width: 100%;
+    width: 100%;
     line-height: 0;
     position: relative;
     text-align: center;
     img{
-    	height: auto;
+        height: auto;
     }
 }
 
