@@ -10,6 +10,7 @@ var imageminJpegRecompress = require('imagemin-jpeg-recompress');
 var pngquant = require('imagemin-pngquant');
 var cache = require('gulp-cache');
 var browserSync = require('browser-sync').create();
+const htmlmin = require('gulp-htmlmin');
 
 var config = {
 	paths: {
@@ -66,6 +67,12 @@ gulp.task('clear', function (done) {
   return cache.clearAll(done);
 });
 
+gulp.task('minify', () => {
+	return gulp.src('*.html')
+	  .pipe(htmlmin({ collapseWhitespace: true }))
+	  .pipe(gulp.dest(config.output.path));
+  });
+
 gulp.task('server', function(){
 	browserSync.init({
 		server: {
@@ -76,4 +83,4 @@ gulp.task('server', function(){
 	gulp.watch(config.paths.html).on('change', browserSync.reload);
 });
 
-gulp.task('default', ['scss', 'server']);
+gulp.task('default', ['scss', 'server', 'minify']);
