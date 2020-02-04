@@ -1,5 +1,6 @@
 # Gulp project   
-  
+
+A responsive landing page template.     
 Check the demo: https://elshad98.github.io/gulp-project/  
  
 ## How to run
