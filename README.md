@@ -1,4 +1,4 @@
-# Code and Magic
+# Gulp project   
   
 Check the demo: https://elshad98.github.io/gulp-project/  
  
