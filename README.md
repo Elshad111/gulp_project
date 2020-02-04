@@ -3,13 +3,16 @@
 A responsive landing page template.     
 Check the demo: https://elshad98.github.io/gulp-project/  
  
-## How to run
+## Instructions
 
-First clone this repository.
+First clone this repository.    
 ```
 $ git clone https://github.com/elshad98/gulp-project.git
+```  
+Install dependencies. Make sure you already have nodejs & npm installed in your system.  
 ```
-Then go to the folder
+$ npm install
+```  
+Run it
 ```
-$ cd code-and-magic
-```
+$ npm start
