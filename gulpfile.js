@@ -10,11 +10,9 @@ var imageminJpegRecompress = require('imagemin-jpeg-recompress');
 var pngquant = require('imagemin-pngquant');
 var cache = require('gulp-cache');
 var browserSync = require('browser-sync').create();
-const htmlmin = require('gulp-htmlmin');
 
 var config = {
 	paths: {
-		scss: './src/scss/**/*.scss',
 		html: './public/index.html',
 		img: './src/img/**'
 	},
@@ -27,7 +25,7 @@ var config = {
 };
 
 gulp.task('scss', function(){
-	return gulp.src(['./src/scss/main.scss', './src/scss/menu.scss', './src/scss/header.scss', './src/scss/services.scss', './src/scss/portfolio.scss', './src/scss/aboutus.scss', './src/scss/team.scss', './src/scss/others.scss', './src/scss/blog.scss', './src/scss/footer.scss', './src/scss/mobile.scss'])
+	return gulp.src(['./src/scss/main.scss', './src/scss/menu.scss', './src/scss/header.scss', './src/scss/services.scss', './src/scss/portfolio.scss', './src/scss/aboutus.scss', './src/scss/team.scss', './src/scss/others.scss', './src/scss/blog.scss', './src/scss/footer.scss'])
 		.pipe(gulpIf(config.isDevelop, sourcemaps.init()))
 		.pipe(sass())
 		.pipe(concat(config.output.cssName))
@@ -67,12 +65,6 @@ gulp.task('clear', function (done) {
   return cache.clearAll(done);
 });
 
-gulp.task('minify', () => {
-	return gulp.src('*.html')
-	  .pipe(htmlmin({ collapseWhitespace: true }))
-	  .pipe(gulp.dest(config.output.path));
-  });
-
 gulp.task('server', function(){
 	browserSync.init({
 		server: {
@@ -83,4 +75,4 @@ gulp.task('server', function(){
 	gulp.watch(config.paths.html).on('change', browserSync.reload);
 });
 
-gulp.task('default', ['scss', 'server', 'minify']);
+gulp.task('default', ['scss', 'server']);
